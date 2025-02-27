@@ -1,0 +1,10 @@
+<mat-form-field class="form-field">
+    <mat-label> Type a number to convert </mat-label>
+    <input matInput type="number" [(ngModel)]="fieldValue">
+    @if (fieldValue) {
+      <button matSuffix mat-icon-button aria-label="Clear" (click)="fieldValue=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    }
+  </mat-form-field>
+  
