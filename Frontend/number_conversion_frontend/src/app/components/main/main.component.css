@@ -1,4 +1,22 @@
+.body {
+    margin: 0;
+  height: 100vh;
+}
+
 .form-field {
     display: flex;
     width: 300px;
+}
+
+.card {
+    width: 300px;
+    height: 200px;
+    margin: 0 auto; /* Horizontal centering */
+    position: relative;
+    top: 50vh; /* Rough vertical centering */
+    transform: translateY(-50%); /* Adjusts for height */
+}
+
+.submit-button {
+    margin-top: 10px;
 }

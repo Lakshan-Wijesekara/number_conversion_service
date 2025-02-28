@@ -1,10 +1,20 @@
-<mat-form-field class="form-field">
-    <mat-label> Type a number to convert </mat-label>
-    <input matInput type="number" [(ngModel)]="fieldValue">
-    @if (fieldValue) {
-      <button matSuffix mat-icon-button aria-label="Clear" (click)="fieldValue=''">
-        <mat-icon>close</mat-icon>
-      </button>
-    }
-  </mat-form-field>
-  
+<div class="card">
+    <mat-form-field class="form-field">
+      <mat-label> Type a number to convert </mat-label>
+      <input matInput type="number" [(ngModel)]="fieldValue">
+      @if (fieldValue) {
+        <button matSuffix mat-icon-button aria-label="Clear" (click)="fieldValue=0">
+          <mat-icon>close</mat-icon>
+        </button>
+      }
+    </mat-form-field>
+      <mat-form-field class="form-field">
+        <mat-label> Result </mat-label>
+        <input matInput #message maxlength="256" [(ngModel)]="wordsResult" placeholder="The string will come...">
+        <mat-hint align="start"><strong> Result in text </strong> </mat-hint>
+        <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+      </mat-form-field>
+    <div class="submit-button">
+      <button (click)="getNumberToWords()" mat-flat-button> Check </button>
+    </div>   
+</div>
